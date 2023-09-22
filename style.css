@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --neutral-transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --neutral-very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  background: var(--neutral-very-light-gray-background-headings-buttons);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+}
+
+.app {
+  width: 920px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.app div {
+  width: 33%;
+  height: 100%;
+  padding: 50px 45px 50px 50px;
+}
+
+.app div h2 {
+  color: var(--neutral-very-light-gray-background-headings-buttons);
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 34px;
+  margin: 40px 0px;
+  text-transform: uppercase;
+}
+
+.app div p {
+  color: var(--neutral-transparent-white-paragraphs);
+  line-height: 24px;
+  margin-bottom: 80px;
+}
+
+.app div button {
+  width: 150px;
+  height: 50px;
+  background: var(--neutral-very-light-gray-background-headings-buttons);
+  outline: none;
+  border-radius: 30px;
+  border: 2px solid var(--neutral-very-light-gray-background-headings-buttons);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.app .sedans {
+  background: var(--primary-bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.app .sedans button {
+  color: var(--primary-bright-orange);
+}
+
+.app .suvs {
+  background: var(--primary-dark-cyan);
+}
+
+.app .suvs button {
+  color: var(--primary-dark-cyan);
+}
+
+.app .luxury {
+  background: var(--primary-very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.app .luxury button {
+  color: var(--primary-very-dark-cyan);
+}
+
+.app div button:hover {
+  background: transparent;
+  color: var(--neutral-very-light-gray-background-headings-buttons);
+}
+
+.attribution {
+  margin: 15px auto 5px;
+}
+
+.attribution a {
+  font-size: 11px;
+}
+
+/* responsive */
+@media screen and (max-width: 375px) {
+  .container {
+    width: 375px;
+    height: 1500px;
+    border: none;
+    overflow: hidden;
+  }
+
+  .app {
+    width: 330px;
+    height: 1325px;
+    flex-direction: column;
+  }
+
+  .app div {
+    width: 100%;
+    height: 440px;
+    padding: 50px 45px 50px 50px;
+  }
+
+  .app div h2 {
+    margin: 30px 0px;
+  }
+
+
+  .app div p {
+    color: var(--neutral-transparent-white-paragraphs);
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .app .sedans {
+    background: var(--primary-bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+
+  .app .luxury {
+    background: var(--primary-very-dark-cyan);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
